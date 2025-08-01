@@ -29,12 +29,12 @@
 MovementUnlocker g_MovementUnlocker;
 
 #ifdef _WIN32
-const unsigned char *pPatchSignature = (unsigned char *)"\x76\x2A\xF2\x0F\x10\x4F\x2A\x41\x0F\x28\xC1\x0F\x28\xD1\xF3\x0F\x59\xC0";
-const char *pPatchPattern = "x?xxxx?xxxxxxxxxxx";
+const unsigned char *pPatchSignature = (unsigned char *)"\x76\x2A\xF2\x0F\x10\x4E\x2A\x41\x0F\x28\xD2\x0F\x28\xC1";
+const char *pPatchPattern = "x?xxxx?xxxxxxx";
 int PatchLen = 1;
 #elif __linux__
-const unsigned char * pPatchSignature = (unsigned char *)"\x0F\x87\x2A\x2A\x2A\x2A\x49\x8B\x7C\x24\x2A\xE8\x2A\x2A\x2A\x2A\x66\x0F\xEF\xED\x66\x0F\xD6\x85";
-const char* pPatchPattern = "xx????xxxx?x????xxxxxxxx";
+const unsigned char * pPatchSignature = (unsigned char *)"\x0F\x87\x2A\x2A\x2A\x2A\x49\x8B\x7C\x24\x2A\x48\x85\xFF";
+const char* pPatchPattern = "xx????xxxx?xxx";
 int PatchLen = 6;
 #endif
 
@@ -151,7 +151,7 @@ const char *MovementUnlocker::GetLicense()
 
 const char *MovementUnlocker::GetVersion()
 {
-	return "1.4";
+	return "1.5";
 }
 
 const char *MovementUnlocker::GetDate()
