@@ -15,7 +15,6 @@
  *
  * You should have received a copy of the GNU General Public License along with
  * this program.  If not, see <http://www.gnu.org/licenses/>.
- *
  */
 
 #include <stdio.h>
@@ -31,11 +30,11 @@ MovementUnlocker g_MovementUnlocker;
 
 #ifdef _WIN32
 const unsigned char *pPatchSignature = (unsigned char *)"\x0F\x86\xB8\x2A\x2A\x2A\xF3\x0F\x58\xD4";
-const char *pPatchPattern = "x?xxxx?xxxxxxx";
+const char *pPatchPattern = "xxx???xxxx";
 int PatchLen = 1;
 #elif __linux__
 const unsigned char * pPatchSignature = (unsigned char *)"\x0F\x87\x2A\x2A\x2A\x2A\xF3\x0F\x10\x3D\x2A\x2A\x2A\x2A\xF3\x0F\x11\xBD";
-const char* pPatchPattern = "xx????xxxx?xxx";
+const char* pPatchPattern = "xx????xxxx????xxxx";
 int PatchLen = 6;
 #endif
 
