@@ -29,11 +29,11 @@
 MovementUnlocker g_MovementUnlocker;
 
 #ifdef _WIN32
-const unsigned char *pPatchSignature = (unsigned char *)"\x76\x2A\xF2\x0F\x10\x4E\x2A\x41\x0F\x28\xD2\x0F\x28\xC1";
+const unsigned char *pPatchSignature = (unsigned char *)"\x0F\x86\xB8\x2A\x2A\x2A\xF3\x0F\x58\xD4";
 const char *pPatchPattern = "x?xxxx?xxxxxxx";
 int PatchLen = 1;
 #elif __linux__
-const unsigned char * pPatchSignature = (unsigned char *)"\x0F\x87\x2A\x2A\x2A\x2A\x49\x8B\x7C\x24\x2A\x48\x85\xFF";
+const unsigned char * pPatchSignature = (unsigned char *)"\x0F\x87\x2A\x2A\x2A\x2A\xF3\x0F\x10\x3D\x2A\x2A\x2A\x2A\xF3\x0F\x11\xBD";
 const char* pPatchPattern = "xx????xxxx?xxx";
 int PatchLen = 6;
 #endif
