@@ -33,8 +33,8 @@ const unsigned char *pPatchSignature = (unsigned char *)"\x0F\x86\xB8\x2A\x2A\x2
 const char *pPatchPattern = "xxx???xxxx";
 int PatchLen = 6;
 #elif __linux__
-const unsigned char * pPatchSignature = (unsigned char *)"\x0F\x87\x2A\x2A\x2A\x2A\xF3\x0F\x10\x3D\x2A\x2A\x2A\x2A\xF3\x0F\x11\xBD";
-const char* pPatchPattern = "xx????xxxx????xxxx";
+const unsigned char * pPatchSignature = (unsigned char *)"\x41\x55\x41\x54\x49\x89\xF4\x53\x48\x89\xFB\x48\x83\xEC\x58\x84\xD2\x75\x0D";
+const char* pPatchPattern = "xxxxxxxxxxxxxx??xx??";
 int PatchLen = 6;
 #endif
 
